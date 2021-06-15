@@ -1,0 +1,11 @@
+diff a/src/pages/form/vFormSingle.vue b/src/pages/form/vFormSingle.vue	(rejected hunks)
+@@ -2,3 +2 @@
+-  <div>
+-    This is {{ id }} Form
+-  </div>
++  <div>This is {{ id }} Form</div>
+@@ -19,3 +16 @@ export default {
+-<style scoped>
+-
+-</style>
++<style scoped></style>
