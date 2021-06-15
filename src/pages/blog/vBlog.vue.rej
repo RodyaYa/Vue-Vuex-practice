@@ -1,0 +1,11 @@
+diff a/src/pages/blog/vBlog.vue b/src/pages/blog/vBlog.vue	(rejected hunks)
+@@ -8,3 +8 @@
+-export default {
+-
+-}
++export default {};
+@@ -13,3 +11 @@ export default {
+-<style scoped>
+-
+-</style>
++<style scoped></style>

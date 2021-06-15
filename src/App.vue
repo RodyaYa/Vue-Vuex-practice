@@ -1,28 +1,66 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <component :is="layout">
+      <b-container>
+        <router-view />
+      </b-container>
+    </component>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+
+import EmptyLayout from "./layouts/EmptyLayout";
+import HorizontalLayout from "./layouts/HorizontalLayout";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    EmptyLayout,
+    HorizontalLayout,
+  },
+  computed: {
+    layout() {
+      return (this.$route.meta.layout || "empty") + "-layout";
+    },
   },
 };
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #212529;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #212529;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.body {
+  padding: 15px;
 }
 </style>

@@ -1,0 +1,11 @@
+diff a/src/pages/form/vFormExample.vue b/src/pages/form/vFormExample.vue	(rejected hunks)
+@@ -2,3 +2 @@
+-  <div>
+-    Form
+-  </div>
++  <div>Form</div>
+@@ -9,2 +7,2 @@ export default {
+-  name:'form',
+-}
++  name: "form",
++};
